@@ -29,8 +29,10 @@ export function SiteHeader() {
   return (
     <header
       className={clsx(
-        "sticky top-0 z-50 border-b transition-colors duration-300",
-        scrolled || open ? "border-line bg-white/95 backdrop-blur-md" : "border-transparent bg-paper/80 backdrop-blur-sm",
+        "sticky top-0 z-50 border-b transition-all duration-300",
+        scrolled || open
+          ? "border-line/80 bg-white/80 shadow-[0_4px_20px_-4px_rgba(16,42,76,0.08)] backdrop-blur-xl"
+          : "border-transparent bg-paper/70 backdrop-blur-md",
       )}
     >
       <div className="container flex h-[68px] sm:h-[72px] items-center justify-between gap-3 sm:gap-6">
