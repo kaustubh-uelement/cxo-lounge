@@ -1,0 +1,73 @@
+@import "@fontsource/poppins/300.css";
+@import "@fontsource/poppins/400.css";
+@import "@fontsource/poppins/500.css";
+@import "@fontsource/poppins/600.css";
+@import "@fontsource/poppins/700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply text-ink-strong;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    @apply bg-brand-100 text-navy-900;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-paper;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-brand-600 sm:text-[13px];
+  }
+  .eyebrow-light {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-brand-300 sm:text-[13px];
+  }
+  .display {
+    @apply text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl;
+  }
+  .h2 {
+    @apply text-3xl font-semibold leading-tight tracking-tight sm:text-4xl;
+  }
+  .h3 {
+    @apply text-xl font-semibold leading-snug;
+  }
+  .lead {
+    @apply text-base leading-relaxed text-ink sm:text-lg;
+  }
+  .card {
+    @apply rounded-2xl border border-line bg-white/90 shadow-card;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium;
+  }
+  .field-label {
+    @apply mb-1.5 block text-sm font-medium text-ink-strong;
+  }
+  .field {
+    @apply w-full rounded-xl border border-line bg-white px-4 py-3 text-[15px] text-ink-strong placeholder:text-ink-muted/70 transition focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-100;
+  }
+  .field-error {
+    @apply mt-1.5 text-sm text-red-700;
+  }
+  .grid-pattern {
+    background-image: linear-gradient(rgba(127, 176, 222, 0.09) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(127, 176, 222, 0.09) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+}
