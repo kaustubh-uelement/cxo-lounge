@@ -20,14 +20,14 @@ export function LogoMark({ className, tone = "brand" }: { className?: string; to
 
 export function Logo({ tone = "brand", className }: { tone?: "brand" | "light"; className?: string }) {
   return (
-    <Link href="/" className={clsx("group inline-flex items-center gap-2.5", className)} aria-label="CIO Lounge home">
-      <LogoMark className="h-9 w-9 transition-transform duration-500 group-hover:rotate-[51deg]" tone={tone} />
+    <Link href="/" className={clsx("group inline-flex items-center gap-2 sm:gap-2.5 shrink-0", className)} aria-label="CIO Lounge home">
+      <LogoMark className="h-8 w-8 sm:h-9 sm:w-9 shrink-0 transition-transform duration-500 group-hover:rotate-[51deg]" tone={tone} />
       <span className="flex flex-col leading-none">
-        <span className={clsx("text-[22px] tracking-tight", tone === "light" ? "text-white" : "text-navy-900")}>
+        <span className={clsx("text-[20px] sm:text-[22px] tracking-tight", tone === "light" ? "text-white" : "text-navy-900")}>
           <span className={clsx("font-semibold", tone === "light" ? "text-brand-300" : "text-brand-600")}>CIO</span>
           <span className="font-light">lounge</span>
         </span>
-        <span className={clsx("mt-1 text-[8.5px] font-medium tracking-[0.28em]", tone === "light" ? "text-brand-200" : "text-ink-muted")}>
+        <span className={clsx("mt-0.5 sm:mt-1 text-[7.5px] sm:text-[8.5px] font-medium tracking-[0.2em] sm:tracking-[0.28em]", tone === "light" ? "text-brand-200" : "text-ink-muted")}>
           INNOVATE · INFLUENCE · IMPACT
         </span>
       </span>

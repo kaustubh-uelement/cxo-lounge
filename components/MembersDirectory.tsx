@@ -82,8 +82,8 @@ export function MembersDirectory({
   return (
     <div>
       <div className="card mb-8 p-4 sm:p-5">
-        <div className="grid gap-3 md:grid-cols-[1fr_240px_180px]">
-          <label className="relative">
+        <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-[1fr_220px_180px]">
+          <label className="relative sm:col-span-2 md:col-span-1">
             <span className="sr-only">Search members</span>
             <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-muted" aria-hidden />
             <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search by name, company or interest" className="field pl-11" />
@@ -103,23 +103,25 @@ export function MembersDirectory({
             </select>
           </label>
         </div>
-        <div className="mt-4 flex flex-wrap items-center gap-2">
-          {(["all", ...roles] as const).map((r) => (
-            <button
-              key={r}
-              type="button"
-              aria-pressed={role === r}
-              onClick={() => setRole(r)}
-              className={clsx(
-                "rounded-full border px-3.5 py-1.5 text-sm transition",
-                role === r ? "border-navy-900 bg-navy-900 text-white" : "border-line bg-white hover:border-brand-300",
-              )}
-            >
-              {r === "all" ? "All roles" : r}
-            </button>
-          ))}
-          <label className="ml-auto flex cursor-pointer items-center gap-2 text-sm text-ink-strong">
-            <input type="checkbox" checked={league} onChange={(e) => setLeague(e.target.checked)} className="h-4 w-4 accent-brand-600" />
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-3 pt-1 border-t border-line/60">
+          <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+            {(["all", ...roles] as const).map((r) => (
+              <button
+                key={r}
+                type="button"
+                aria-pressed={role === r}
+                onClick={() => setRole(r)}
+                className={clsx(
+                  "rounded-full border px-3 py-1 text-xs sm:px-3.5 sm:py-1.5 sm:text-sm transition",
+                  role === r ? "border-navy-900 bg-navy-900 text-white" : "border-line bg-white hover:border-brand-300",
+                )}
+              >
+                {r === "all" ? "All roles" : r}
+              </button>
+            ))}
+          </div>
+          <label className="flex cursor-pointer items-center gap-2 text-xs sm:text-sm font-medium text-ink-strong py-1">
+            <input type="checkbox" checked={league} onChange={(e) => setLeague(e.target.checked)} className="h-4 w-4 accent-brand-600 rounded" />
             League players only
           </label>
         </div>

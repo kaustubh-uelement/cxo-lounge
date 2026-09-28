@@ -59,16 +59,16 @@ export function PlanCard({ plan }: { plan: Plan }) {
   return (
     <div
       className={clsx(
-        "relative flex h-full flex-col rounded-2xl p-7",
+        "relative flex h-full flex-col rounded-2xl p-6 sm:p-7",
         plan.highlight ? "bg-navy-900 text-brand-100 shadow-lift" : "border border-line bg-white shadow-card",
       )}
     >
       {plan.highlight && (
-        <span className="absolute -top-3 left-7 rounded-full bg-gold px-3 py-1 text-xs font-semibold text-navy-950">Limited cohort</span>
+        <span className="absolute -top-3 left-6 sm:left-7 rounded-full bg-gold px-3 py-1 text-xs font-semibold text-navy-950">Limited cohort</span>
       )}
       <h3 className={clsx("text-lg font-semibold", plan.highlight && "!text-white")}>{plan.name}</h3>
       <p className={clsx("mt-1 text-sm", plan.highlight ? "text-brand-200" : "text-ink-muted")}>{plan.audience}</p>
-      <div className="mt-6 flex items-baseline gap-2">
+      <div className="mt-6 flex flex-wrap items-baseline gap-2">
         <span className={clsx("font-semibold tracking-tight", plan.price.startsWith("₹") ? "text-3xl" : "text-2xl", plan.highlight ? "text-white" : "text-navy-900")}>{plan.price}</span>
         {plan.cadence && <span className={plan.highlight ? "text-brand-200" : "text-ink-muted"}>{plan.cadence}</span>}
       </div>
@@ -96,7 +96,7 @@ export function PlanCard({ plan }: { plan: Plan }) {
 
 export function SponsorTierGrid({ compact }: { compact?: boolean }) {
   return (
-    <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+    <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
       {sponsorTiers.map((t) => (
         <div
           key={t.id}
@@ -107,9 +107,9 @@ export function SponsorTierGrid({ compact }: { compact?: boolean }) {
         >
           <p className={clsx("text-xs font-semibold uppercase tracking-[0.18em]", t.featured ? "text-brand-100" : "text-brand-600")}>{t.slots}</p>
           <h3 className={clsx("mt-3 text-xl font-semibold", t.featured && "!text-white")}>{t.name}</h3>
-          <p className="mt-4">
-            <span className={clsx("text-3xl font-semibold tracking-tight", t.featured ? "text-white" : "text-navy-900")}>{t.price}</span>
-            <span className={clsx("ml-2 text-sm", t.featured ? "text-brand-100" : "text-ink-muted")}>{t.priceNote}</span>
+          <p className="mt-4 flex flex-wrap items-baseline gap-1.5">
+            <span className={clsx("text-2xl sm:text-3xl font-semibold tracking-tight", t.featured ? "text-white" : "text-navy-900")}>{t.price}</span>
+            <span className={clsx("text-sm", t.featured ? "text-brand-100" : "text-ink-muted")}>{t.priceNote}</span>
           </p>
           {!compact && (
             <ul className="mt-6 space-y-2.5 text-sm">

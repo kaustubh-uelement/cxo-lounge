@@ -41,7 +41,7 @@ export function PartnerForm() {
 
   if (status === "done")
     return (
-      <SuccessPanel title="Thank you — we'll be in touch">
+      <SuccessPanel title="Thank you! We'll be in touch">
         Our partnerships team will share availability for your chosen tiers and cities, along with the audience profile.
       </SuccessPanel>
     );

@@ -80,7 +80,7 @@ export const plans: Plan[] = [
 ];
 
 export const eligibility = [
-  "You lead technology for an enterprise — CIO, CTO, CISO, CDO or head of IT.",
+  "You lead technology for an enterprise: CIO, CTO, CISO, CDO or head of IT.",
   "CIO Lounge is for the top layer only, not one level below.",
   "Vendors, OEMs and system integrators join as partners, not members.",
 ];
@@ -88,7 +88,7 @@ export const eligibility = [
 export const membershipFaq = [
   {
     q: "Why is there a membership fee?",
-    a: "Nothing on CIO Lounge is free. A fee keeps the community committed and the conversations serious — and it means our members are never the product.",
+    a: "Nothing on CIO Lounge is free. A fee keeps the community committed and the conversations serious, and it means our members are never the product.",
   },
   {
     q: "Do partners pay commissions on deals with members?",
@@ -100,7 +100,7 @@ export const membershipFaq = [
   },
   {
     q: "Do I need to play pickleball?",
-    a: "No. The league is one part of the platform. Many members join for roundtables, learning and advisory — though pickleball is easy to learn if you want to try.",
+    a: "No. The league is one part of the platform. Many members join for roundtables, learning and advisory, though pickleball is easy to learn if you want to try.",
   },
   {
     q: "Can my family join events?",

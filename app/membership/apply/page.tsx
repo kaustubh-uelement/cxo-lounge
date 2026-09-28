@@ -6,7 +6,7 @@ import { MembershipForm } from "@/components/forms/MembershipForm";
 
 export const metadata: Metadata = {
   title: "Apply for membership",
-  description: "Apply to join CIO Lounge — for CIOs, CTOs, CISOs, CDOs and veteran technology leaders.",
+  description: "Apply to join CIO Lounge: for CIOs, CTOs, CISOs, CDOs and veteran technology leaders.",
 };
 
 export default function ApplyPage() {

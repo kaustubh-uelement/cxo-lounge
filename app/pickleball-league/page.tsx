@@ -10,7 +10,7 @@ import { Countdown } from "@/components/Countdown";
 import { CtaBand } from "@/components/CtaBand";
 
 export const metadata: Metadata = {
-  title: "CIO Pickleball League — India Tour",
+  title: "CIO Pickleball League: India Tour",
   description:
     "India's premier pickleball league for IT leaders. A multi-city championship for CIOs, CTOs and CISOs, starting in Mumbai in November 2026.",
 };
@@ -19,7 +19,7 @@ const whyPickleball = ["Easy to learn", "Suitable for all age groups", "Low impa
 
 const format = [
   { stage: "League stage", body: "Two groups of four. Every team plays each team in its group twice. Each player plays at least two matches, at most two." },
-  { stage: "Super Four", body: "The top two teams from each group play one round robin — three matches each. No player plays more than once." },
+  { stage: "Super Four", body: "The top two teams from each group play one round robin (three matches each). No player plays more than once." },
   { stage: "Playoffs", body: "Match 1: 1st v 2nd → Qualifier 1. Match 2: 3rd v 4th. Eliminator: loser of Match 1 v winner of Match 2 → Qualifier 2." },
   { stage: "Final", body: "Qualifier 1 v Qualifier 2. From the playoffs on, captains decide who plays each match." },
 ];
@@ -53,7 +53,7 @@ export default function LeaguePage() {
               CIO Pickleball League <span className="block text-brand-300">India Tour</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-brand-100">
-              India&apos;s premier pickleball league for IT leaders — where technology meets sports, networking and lifestyle.
+              India&apos;s premier pickleball league for IT leaders, where technology meets sports, networking and lifestyle.
             </p>
             <p className="mt-6 text-sm font-medium tracking-wide text-brand-200">
               Mumbai · Delhi · Bangalore · Hyderabad · Chennai · Ahmedabad · Pune <span className="text-brand-300">(optional)</span>
@@ -65,7 +65,7 @@ export default function LeaguePage() {
           </div>
           <div className="relative">
             <PaddleArt className="mx-auto w-full max-w-sm" />
-            <div className="mx-auto mt-4 w-fit rounded-2xl border border-white/10 bg-white/5 p-4">
+            <div className="mx-auto mt-4 w-fit max-w-full rounded-2xl border border-white/10 bg-white/5 p-4">
               <p className="mb-2 text-center text-xs uppercase tracking-[0.18em] text-brand-200">Mumbai League opens in</p>
               <Countdown date={mumbai.startDate!} />
             </div>
@@ -82,17 +82,17 @@ export default function LeaguePage() {
               <li className="flex gap-3"><Check className="mt-1 h-5 w-5 shrink-0 text-brand-600" aria-hidden />India&apos;s first multi-city pickleball championship exclusively for technology leaders.</li>
               <li className="flex gap-3"><Check className="mt-1 h-5 w-5 shrink-0 text-brand-600" aria-hidden />A national sporting ecosystem where IT leaders compete, network and build lasting relationships.</li>
               <li className="flex gap-3"><Check className="mt-1 h-5 w-5 shrink-0 text-brand-600" aria-hidden />Every city crowns its champion before the National Grand Finale in Goa, Phuket or Sri Lanka.</li>
-              <li className="flex gap-3"><Check className="mt-1 h-5 w-5 shrink-0 text-brand-600" aria-hidden />Open to CIOs, CTOs and CISOs only — the top layer, not one level below.</li>
+              <li className="flex gap-3"><Check className="mt-1 h-5 w-5 shrink-0 text-brand-600" aria-hidden />Open to CIOs, CTOs and CISOs only: the top layer, not one level below.</li>
             </ul>
           </div>
-          <div className="rounded-3xl bg-paper p-8">
+          <div className="rounded-3xl bg-paper p-6 sm:p-8">
             <p className="eyebrow">About pickleball</p>
-            <h3 className="mt-3 text-2xl font-semibold">One of the world&apos;s fastest-growing sports</h3>
-            <p className="mt-3 leading-relaxed">
+            <h3 className="mt-3 text-xl sm:text-2xl font-semibold">One of the world&apos;s fastest-growing sports</h3>
+            <p className="mt-3 text-[15px] sm:text-base leading-relaxed">
               It combines elements of tennis, badminton and table tennis, and has become one of the fastest-growing sports across the USA,
               Europe and now India.
             </p>
-            <ul className="mt-6 grid grid-cols-2 gap-3">
+            <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
               {whyPickleball.map((w) => (
                 <li key={w} className="flex items-center gap-2.5 text-sm font-medium text-ink-strong">
                   <span className="h-2.5 w-2.5 rounded-full bg-ball ring-2 ring-lime-600/30" aria-hidden />{w}
@@ -139,7 +139,7 @@ export default function LeaguePage() {
             </li>
           ))}
         </ol>
-        <p className="mt-6 text-sm text-brand-200">Podium: 1st — Final winner · 2nd — Final runner-up · 3rd — Eliminator loser.</p>
+        <p className="mt-6 text-sm text-brand-200">Podium: 1st: Final winner · 2nd: Final runner-up · 3rd: Eliminator loser.</p>
       </Section>
 
       <Section tone="white">
@@ -147,7 +147,7 @@ export default function LeaguePage() {
           <div>
             <p className="eyebrow">Every player receives</p>
             <h2 className="h2 mt-3">A personalised kit worth ₹25–30K</h2>
-            <p className="lead mt-4">A fully personalised, CIO Lounge–branded kit from recognised sports brands — packed and ready for game day.</p>
+            <p className="lead mt-4">A fully personalised, CIO Lounge–branded kit from recognised sports brands, packed and ready for game day.</p>
             <ul className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
               {kit.map((k) => (
                 <li key={k.label} className="flex flex-col items-start gap-3 rounded-xl border border-line bg-paper p-4 text-sm font-medium text-ink-strong">
@@ -162,7 +162,7 @@ export default function LeaguePage() {
             <div className="mt-8 space-y-4">
               {[
                 ["All India Pickleball Association", "Tournament partner: appoints the tournament director and a referee in every city, and sets the rules we play by."],
-                ["Vrushali Thakare", "National gold medallist and brand ambassador — on the ground in every city and at the Grand Finale."],
+                ["Vrushali Thakare", "National gold medallist and brand ambassador, on the ground in every city and at the Grand Finale."],
                 ["ITC and Taj", "Hospitality partners for the wellness zone and food and beverage court."],
                 ["Certified coaches", "Friday-to-Sunday pre-season training at Navi Mumbai, Lower Parel, Malad and Thane."],
               ].map(([t, b]) => (
@@ -180,17 +180,17 @@ export default function LeaguePage() {
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
             <p className="eyebrow">Game day experience</p>
-            <h2 className="h2 mt-3">Sports, business and lifestyle — in one day</h2>
+            <h2 className="h2 mt-3">Sports, business and lifestyle in one day</h2>
             <div className="mt-6 flex flex-wrap gap-2">
-              {gameDay.map((g) => <span key={g} className="rounded-full border border-line bg-white px-4 py-2 text-sm text-ink-strong">{g}</span>)}
+              {gameDay.map((g) => <span key={g} className="rounded-full border border-line bg-white px-3.5 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm text-ink-strong">{g}</span>)}
             </div>
-            <p className="mt-6 text-sm font-semibold tracking-[0.18em] text-brand-600">ONE DAY · ONE LEAGUE · ONE UNFORGETTABLE EXPERIENCE</p>
+            <p className="mt-6 text-xs sm:text-sm font-semibold tracking-[0.16em] sm:tracking-[0.18em] text-brand-600">ONE DAY · ONE LEAGUE · ONE UNFORGETTABLE EXPERIENCE</p>
           </div>
-          <div className="rounded-3xl bg-brand-50 p-8">
+          <div className="rounded-3xl bg-brand-50 p-6 sm:p-8">
             <p className="eyebrow">Fun for the entire family · optional</p>
-            <h3 className="mt-3 text-2xl font-semibold">A perfect weekend outing</h3>
+            <h3 className="mt-3 text-xl sm:text-2xl font-semibold">A perfect weekend outing</h3>
             <div className="mt-5 flex flex-wrap gap-2">
-              {family.map((f) => <span key={f} className="rounded-full bg-white px-3.5 py-1.5 text-sm text-brand-700">{f}</span>)}
+              {family.map((f) => <span key={f} className="rounded-full bg-white px-3 sm:px-3.5 py-1 sm:py-1.5 text-xs sm:text-sm text-brand-700">{f}</span>)}
             </div>
           </div>
         </div>
@@ -200,7 +200,7 @@ export default function LeaguePage() {
         <SectionHeading
           eyebrow="Sponsorship opportunities"
           title="Every category includes branding, networking and engagement"
-          lead="Sponsors play alongside CIOs — there is no wall between sponsor and delegate."
+          lead="Sponsors play alongside CIOs: there is no wall between sponsor and delegate."
           action={<ButtonLink href="/partners#enquire" arrow>Enquire</ButtonLink>}
         />
         <SponsorTierGrid />

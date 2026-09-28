@@ -206,7 +206,7 @@ export function MembershipForm() {
 
       {status === "error" && message && <p className="field-error mt-6" role="alert">{message}</p>}
 
-      <div className="mt-8 flex items-center justify-between gap-3 border-t border-line pt-6">
+      <div className="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-6">
         {step > 0 ? (
           <Button type="button" variant="secondary" onClick={() => setStep((s) => s - 1)}>
             <ArrowLeft className="h-4 w-4" aria-hidden /> Back

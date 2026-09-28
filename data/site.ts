@@ -4,7 +4,7 @@ export const site = {
   brand: "CIO Lounge",
   tagline: "Innovate | Influence | Impact",
   description:
-    "CIO Lounge is a premium platform for CIOs, CTOs, CISOs and the technology ecosystem — curated roundtables, learning with top institutions, veteran CIO advisory and India's premier pickleball league for IT leaders.",
+    "CIO Lounge is a premium platform for CIOs, CTOs, CISOs and the technology ecosystem: curated roundtables, learning with top institutions, veteran CIO advisory and India's premier pickleball league for IT leaders.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.ciolounge.in", // [confirm domain]
   email: "[hello@ciolounge.in]",
   phone: "[+91 __________]",
@@ -63,7 +63,7 @@ export const principles = [
   },
   {
     title: "No commissions, ever",
-    body: "We earn from sponsorships and memberships — never from the deals partners close with our members.",
+    body: "We earn from sponsorships and memberships, never from the deals partners close with our members.",
   },
   {
     title: "Nothing is free",
@@ -87,7 +87,7 @@ export const platforms = [
     key: "studio",
     name: "CIO Studio",
     kicker: "Where CIOs speak. Technology connects.",
-    body: "The voice of the community — perspectives, conversations and case notes from the people who run India's technology.",
+    body: "The voice of the community: perspectives, conversations and case notes from the people who run India's technology.",
     href: "/studio",
   },
   {

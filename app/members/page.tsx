@@ -8,7 +8,7 @@ import { CtaBand } from "@/components/CtaBand";
 
 export const metadata: Metadata = {
   title: "Members",
-  description: "The CIO Lounge member directory — CIOs, CTOs, CISOs and CDOs from India's leading enterprises.",
+  description: "The CIO Lounge member directory: CIOs, CTOs, CISOs and CDOs from India's leading enterprises.",
 };
 
 export default function MembersPage() {
@@ -18,7 +18,7 @@ export default function MembersPage() {
       <PageHero
         eyebrow="Member directory"
         title="The people in the room"
-        lead="CIO Lounge is for the top layer of enterprise technology: CIOs, CTOs, CISOs and CDOs. Partners are our customers — members are our peers."
+        lead="CIO Lounge is for the top layer of enterprise technology: CIOs, CTOs, CISOs and CDOs. Partners are our customers; members are our peers."
         aside={
           <dl className="grid grid-cols-2 gap-3">
             {byRole.map((r) => (
@@ -45,7 +45,7 @@ export default function MembersPage() {
         <SectionHeading
           eyebrow="Veteran CIO Advisory"
           title="Advisory council"
-          lead="Retired CIOs who advise enterprises — paid by the client, never commissioned by vendors."
+          lead="Retired CIOs who advise enterprises: paid by the client, never commissioned by vendors."
           action={<ButtonLink href="/advisory" variant="secondary" arrow>About the advisory</ButtonLink>}
         />
         <div className="grid gap-5 md:grid-cols-3">

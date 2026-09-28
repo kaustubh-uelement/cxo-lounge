@@ -7,7 +7,7 @@ import { CtaBand } from "@/components/CtaBand";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "CXO Lounge is a multi-platform ecosystem created for CIOs and technology leaders — built by a CIO who has sat on both sides of the table.",
+  description: "CXO Lounge is a multi-platform ecosystem created for CIOs and technology leaders, built by a CIO who has sat on both sides of the table.",
 };
 
 export default function AboutPage() {
@@ -16,7 +16,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About CXO Lounge"
         title="A multi-platform ecosystem built for CIOs and technology leaders"
-        lead="CXO Lounge brings together technology, people, ideas, enterprises and opportunities — so CIOs meet as peers, and partners meet them in a setting built on trust."
+        lead="CXO Lounge brings together technology, people, ideas, enterprises and opportunities, so CIOs meet as peers and partners meet them in a setting built on trust."
       />
       <Section tone="white">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-center">
@@ -36,12 +36,12 @@ export default function AboutPage() {
             <h2 className="h2 mt-3">Built by a CIO who has sat on both sides of the table</h2>
             <div className="mt-6 space-y-4 text-[17px] leading-relaxed">
               <p>
-                Kamal has led technology as a CIO and worked closely with vendors and partners — so he knows what CIOs value, and what
+                Kamal has led technology as a CIO and worked closely with vendors and partners, so he knows what CIOs value, and what
                 partners need from an audience.
               </p>
               <p>
                 He watched CIO engagement turn into a commodity: dozens of forums, the same cocktail dinners, and very little that lasted.
-                CIO Lounge is his answer — a community where members invest to belong, partners sponsor without taking a cut, and the
+                CIO Lounge is his answer: a community where members invest to belong, partners sponsor without taking a cut, and the
                 conversation is led by a CIO.
               </p>
             </div>
@@ -49,7 +49,7 @@ export default function AboutPage() {
         </div>
       </Section>
       <Section>
-        <SectionHeading eyebrow="Our mission" title="Meaningful connections among CIOs — and with the partners who serve them" />
+        <SectionHeading eyebrow="Our mission" title="Meaningful connections among CIOs and with the partners who serve them" />
         <div className="grid gap-5 md:grid-cols-2">
           {principles.map((p) => (
             <div key={p.title} className="card border-l-4 border-l-brand-600 p-6">

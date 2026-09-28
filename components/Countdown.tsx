@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { clsx } from "clsx";
 
 function diff(target: number) {
   const ms = Math.max(0, target - Date.now());
@@ -27,20 +28,21 @@ export function Countdown({ date, tone = "light" }: { date: string; tone?: "ligh
     { label: "Minutes", value: t?.minutes },
   ];
   return (
-    <div className="flex gap-2.5" role="timer" aria-label="Time until the event">
+    <div className="flex max-w-full gap-2 sm:gap-2.5" role="timer" aria-label="Time until the event">
       {cells.map((c) => (
         <div
           key={c.label}
-          className={
+          className={clsx(
+            "flex-1 sm:flex-initial min-w-[62px] sm:min-w-[76px] rounded-xl px-2 sm:px-3 py-2 sm:py-2.5 text-center",
             tone === "light"
-              ? "min-w-[76px] rounded-xl border border-white/15 bg-white/10 px-3 py-2.5 text-center"
-              : "min-w-[76px] rounded-xl border border-line bg-white px-3 py-2.5 text-center"
-          }
+              ? "border border-white/15 bg-white/10"
+              : "border border-line bg-white",
+          )}
         >
-          <div className={tone === "light" ? "text-2xl font-semibold tabular-nums text-white" : "text-2xl font-semibold tabular-nums text-navy-900"}>
-            {c.value === undefined ? "–" : String(c.value).padStart(2, "0")}
+          <div className={tone === "light" ? "text-xl sm:text-2xl font-semibold tabular-nums text-white" : "text-xl sm:text-2xl font-semibold tabular-nums text-navy-900"}>
+            {c.value === undefined ? "--" : String(c.value).padStart(2, "0")}
           </div>
-          <div className={tone === "light" ? "text-[11px] uppercase tracking-wider text-brand-200" : "text-[11px] uppercase tracking-wider text-ink-muted"}>
+          <div className={tone === "light" ? "text-[10px] sm:text-[11px] uppercase tracking-wider text-brand-200" : "text-[10px] sm:text-[11px] uppercase tracking-wider text-ink-muted"}>
             {c.label}
           </div>
         </div>

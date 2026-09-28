@@ -16,7 +16,7 @@ export async function submitJson(url: string, data: unknown): Promise<{ ok: bool
     const res = await fetch(url, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(data) });
     return await res.json();
   } catch {
-    return { ok: false, message: "Network error — please try again." };
+    return { ok: false, message: "Network error. Please try again." };
   }
 }
 

@@ -19,7 +19,7 @@ export default function ContactPage() {
         <div className="lg:pt-6">
           <p className="eyebrow">Contact</p>
           <h1 className="display mt-3">Talk to us</h1>
-          <p className="lead mt-5">Membership, the league, partnerships or the Foundation — we usually reply within one working day.</p>
+          <p className="lead mt-5">Membership, the league, partnerships or the Foundation: we usually reply within one working day.</p>
           <ul className="mt-8 space-y-4">
             {items.map((i) => (
               <li key={i.label} className="flex items-start gap-4">

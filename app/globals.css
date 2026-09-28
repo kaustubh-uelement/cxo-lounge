@@ -12,16 +12,22 @@
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
   }
   body {
     @apply bg-paper font-sans text-ink antialiased;
+    overflow-x: hidden;
+    width: 100%;
+    min-width: 0;
   }
   h1, h2, h3, h4 {
     @apply text-ink-strong;
     text-wrap: balance;
+    overflow-wrap: break-word;
   }
   p {
     text-wrap: pretty;
+    overflow-wrap: break-word;
   }
   ::selection {
     @apply bg-brand-100 text-navy-900;
@@ -33,19 +39,19 @@
 
 @layer components {
   .eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.2em] text-brand-600 sm:text-[13px];
+    @apply text-xs font-semibold uppercase tracking-[0.16em] text-brand-600 sm:tracking-[0.2em] sm:text-[13px];
   }
   .eyebrow-light {
-    @apply text-xs font-semibold uppercase tracking-[0.2em] text-brand-300 sm:text-[13px];
+    @apply text-xs font-semibold uppercase tracking-[0.16em] text-brand-300 sm:tracking-[0.2em] sm:text-[13px];
   }
   .display {
-    @apply text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl;
+    @apply text-3xl font-semibold leading-[1.12] tracking-tight sm:text-5xl lg:text-6xl;
   }
   .h2 {
-    @apply text-3xl font-semibold leading-tight tracking-tight sm:text-4xl;
+    @apply text-2xl font-semibold leading-tight tracking-tight sm:text-3xl lg:text-4xl;
   }
   .h3 {
-    @apply text-xl font-semibold leading-snug;
+    @apply text-lg font-semibold leading-snug sm:text-xl;
   }
   .lead {
     @apply text-base leading-relaxed text-ink sm:text-lg;
@@ -60,7 +66,7 @@
     @apply mb-1.5 block text-sm font-medium text-ink-strong;
   }
   .field {
-    @apply w-full rounded-xl border border-line bg-white px-4 py-3 text-[15px] text-ink-strong placeholder:text-ink-muted/70 transition focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-100;
+    @apply w-full max-w-full rounded-xl border border-line bg-white px-4 py-3 text-[15px] text-ink-strong placeholder:text-ink-muted/70 transition focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-100;
   }
   .field-error {
     @apply mt-1.5 text-sm text-red-700;

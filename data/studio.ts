@@ -1,4 +1,4 @@
-// CIO Studio — perspectives from the community. These are DRAFT articles written from the founder's
+// CIO Studio: perspectives from the community. These are DRAFT articles written from the founder's
 // stated views; review and approve (or replace) before publishing.
 
 export interface Article {
@@ -14,27 +14,27 @@ export interface Article {
 export const articles: Article[] = [
   {
     slug: "why-cio-events-stopped-working",
-    title: "Why CIO events stopped working — and what comes next",
+    title: "Why CIO events stopped working, and what comes next",
     dek: "A roundtable that ends with the dinner is not engagement. It is hospitality.",
     category: "Perspective",
     author: "CIO Lounge Editorial",
     readMinutes: 4,
     body: [
       "India has around 125 forums, media houses and agencies that bring CIOs together. OEMs run their own signature events on top. For a technology leader, two events a month is normal. For a vendor, a single roundtable can cost as much as a small proof of concept.",
-      "Yet the outcome is often the same: a presentation, a cocktail dinner, and the engagement ends. At a typical large flagship event, only a fraction of the audience holds budget — and dozens of sponsors chase them.",
+      "Yet the outcome is often the same: a presentation, a cocktail dinner, and the engagement ends. At a typical large flagship event, only a fraction of the audience holds budget, and dozens of sponsors chase them.",
       "CIO Lounge starts from a different premise. Members pay to belong, so the room is serious. Partners pay to sponsor, never to take a cut of deals. And the conversation is led by a CIO, not a vendor.",
     ],
   },
   {
     slug: "the-roundtable-that-ends-in-a-poc",
     title: "The roundtable that ends in a proof of concept",
-    dek: "Pre-read, a 15-minute capsule, a CIO in the chair — and a room that owns the problem.",
+    dek: "Pre-read, a 15-minute capsule, a CIO in the chair, and a room that owns the problem.",
     category: "Playbook",
     author: "CIO Lounge Editorial",
     readMinutes: 3,
     body: [
       "Our roundtable format is simple. The partner's literature goes to about 15 targeted leaders in advance, so they arrive with their pros and cons already formed.",
-      "The partner's product head gets 15 minutes — 25 at most. Then a member CIO moderates an open discussion of real pain points. The product stops being the vendor's and becomes the room's.",
+      "The partner's product head gets 15 minutes, 25 at most. Then a member CIO moderates an open discussion of real pain points. The product stops being the vendor's and becomes the room's.",
       "When three or four leaders share the pain point, they step forward together. One successful proof of concept then builds credibility across the whole community.",
     ],
   },

@@ -7,7 +7,7 @@ import { CtaBand } from "@/components/CtaBand";
 
 export const metadata: Metadata = {
   title: "Events",
-  description: "Every event CXO Lounge is hosting — the CIO Pickleball League India Tour, curated roundtables, learning programmes and member evenings.",
+  description: "Every event CXO Lounge is hosting: the CIO Pickleball League India Tour, curated roundtables, learning programmes and member evenings.",
 };
 
 export default function EventsPage() {
@@ -18,7 +18,7 @@ export default function EventsPage() {
       <PageHero
         eyebrow="Events"
         title="Every event we're hosting"
-        lead="The CIO Pickleball League India Tour, curated roundtables, learning programmes and member evenings — built for decision-makers, not headcount."
+        lead="The CIO Pickleball League India Tour, curated roundtables, learning programmes and member evenings, built for decision-makers, not headcount."
         aside={
           <dl className="grid grid-cols-2 gap-4">
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">

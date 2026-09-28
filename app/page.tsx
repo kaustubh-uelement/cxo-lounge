@@ -29,7 +29,7 @@ export default function HomePage() {
               Where India&apos;s technology leaders meet as <span className="text-brand-300">peers</span>, not prospects.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-brand-100 sm:text-lg">
-              A premium platform for CIOs, CTOs and CISOs — curated roundtables, learning with top institutions, veteran CIO advisory and
+              A premium platform for CIOs, CTOs and CISOs: curated roundtables, learning with top institutions, veteran CIO advisory and
               India&apos;s premier pickleball league for IT leaders.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
@@ -62,12 +62,12 @@ export default function HomePage() {
         </div>
 
         <div className="relative border-t border-white/10">
-          <dl className="container grid grid-cols-2 gap-px lg:grid-cols-4">
+          <dl className="container grid grid-cols-2 gap-4 py-4 sm:gap-6 sm:py-0 lg:grid-cols-4">
             {headlineStats.map((s) => (
-              <div key={s.label} className="py-7 lg:py-8">
+              <div key={s.label} className="py-4 sm:py-7 lg:py-8">
                 <dt className="sr-only">{s.label}</dt>
-                <dd className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">{s.value}</dd>
-                <dd className="mt-1 text-sm text-brand-200">{s.label}</dd>
+                <dd className="text-2xl font-semibold tracking-tight text-white sm:text-4xl">{s.value}</dd>
+                <dd className="mt-1 text-xs sm:text-sm text-brand-200">{s.label}</dd>
               </div>
             ))}
           </dl>
@@ -79,7 +79,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="What's on"
           title="Events we're hosting"
-          lead="From the India Tour to curated roundtables — every event is built for decision-makers, not headcount."
+          lead="From the India Tour to curated roundtables, every event is built for decision-makers, not headcount."
           action={<ButtonLink href="/events" variant="secondary" arrow>All events</ButtonLink>}
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -94,14 +94,14 @@ export default function HomePage() {
             <p className="eyebrow">Why CIO Lounge</p>
             <h2 className="h2 mt-3">CIO engagement has become a commodity.</h2>
             <p className="lead mt-4">
-              Cocktails, dinner — and the engagement ends. Partners see little lasting impact, and CIOs&apos; presence is commoditised by
+              Cocktails, dinner, and the engagement ends. Partners see little lasting impact, and CIOs&apos; presence is commoditised by
               agencies. We built CIO Lounge to change that.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-3">
             {marketProblem.map((m) => (
-              <div key={m.value} className="rounded-2xl border-t-4 border-brand-600 bg-paper p-6">
-                <p className="text-4xl font-semibold tracking-tight text-brand-600 sm:text-5xl">{m.value}</p>
+              <div key={m.value} className="rounded-2xl border-t-4 border-brand-600 bg-paper p-5 sm:p-6">
+                <p className="text-3xl font-semibold tracking-tight text-brand-600 sm:text-4xl lg:text-5xl">{m.value}</p>
                 <p className="mt-3 text-sm leading-relaxed">{m.label}</p>
               </div>
             ))}
@@ -165,15 +165,15 @@ export default function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-100">Flagship property</p>
             <h2 className="display mt-4 !text-white">CIO Pickleball League · India Tour</h2>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-brand-50">
-              India&apos;s first multi-city pickleball championship exclusively for technology leaders — designed to become the IPL of
+              India&apos;s first multi-city pickleball championship exclusively for technology leaders, designed to become the IPL of
               corporate pickleball.
             </p>
-            <dl className="mt-8 grid max-w-lg grid-cols-3 gap-6">
+            <dl className="mt-8 grid max-w-lg grid-cols-3 gap-3 sm:gap-6">
               {[["8 × 8", "teams × players"], ["1 day", "per city league"], ["₹25–30K", "kit per player"]].map(([v, l]) => (
                 <div key={l}>
                   <dt className="sr-only">{l}</dt>
-                  <dd className="text-2xl font-semibold text-white sm:text-3xl">{v}</dd>
-                  <dd className="text-sm text-brand-100">{l}</dd>
+                  <dd className="text-xl font-semibold text-white sm:text-3xl">{v}</dd>
+                  <dd className="text-xs sm:text-sm text-brand-100">{l}</dd>
                 </div>
               ))}
             </dl>
@@ -191,7 +191,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="Membership"
           title="Benefits that go beyond the event"
-          lead="Professional, personal and family — rolled out across the year."
+          lead="Professional, personal and family: rolled out across the year."
           action={<ButtonLink href="/membership" arrow>See membership</ButtonLink>}
         />
         <BenefitsGrid />
@@ -202,7 +202,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="The community"
           title="Who you'll meet"
-          lead="CIOs, CTOs, CISOs and CDOs — the top layer only, not one level below."
+          lead="CIOs, CTOs, CISOs and CDOs: the top layer only, not one level below."
           action={<ButtonLink href="/members" variant="secondary" arrow>Member directory</ButtonLink>}
         />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -243,17 +243,17 @@ export default function HomePage() {
 
       {/* Foundation */}
       <Section tone="white" className="!py-14">
-        <div className="flex flex-col items-start gap-6 rounded-3xl border border-line bg-paper p-8 sm:flex-row sm:items-center sm:p-10">
-          <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-brand-600 text-white">
-            <HeartHandshake className="h-8 w-8" aria-hidden />
+        <div className="flex flex-col items-start gap-6 rounded-3xl border border-line bg-paper p-6 sm:flex-row sm:items-center sm:p-10">
+          <div className="flex h-14 w-14 sm:h-16 sm:w-16 shrink-0 items-center justify-center rounded-2xl bg-brand-600 text-white">
+            <HeartHandshake className="h-7 w-7 sm:h-8 sm:w-8" aria-hidden />
           </div>
           <div className="flex-1">
             <p className="eyebrow">CIO Foundation</p>
-            <p className="mt-2 text-xl font-semibold text-ink-strong sm:text-2xl">
+            <p className="mt-2 text-lg sm:text-2xl font-semibold text-ink-strong">
               2% of CIO-vertical revenue goes back to the families of our community.
             </p>
           </div>
-          <ButtonLink href="/foundation" variant="secondary" arrow>How it works</ButtonLink>
+          <ButtonLink href="/foundation" variant="secondary" arrow className="w-full sm:w-auto text-center">How it works</ButtonLink>
         </div>
       </Section>
 

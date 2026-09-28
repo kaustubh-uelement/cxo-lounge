@@ -27,7 +27,7 @@ export default function LearningPage() {
             <SectionHeading eyebrow="The model" title="How a programme works" />
             <div className="grid gap-4 sm:grid-cols-3">
               {[
-                ["40", "leaders per cohort — CIOs, CISOs and CTOs"],
+                ["40", "leaders per cohort: CIOs, CISOs and CTOs"],
                 ["₹10,000", "member registration fee"],
                 ["₹1.5L", "programme value per participant, subsidised by the sponsor"],
               ].map(([v, l]) => (
@@ -39,7 +39,7 @@ export default function LearningPage() {
             </div>
             <p className="mt-6 leading-relaxed">
               The programme partner receives stage time with the cohort and a 30-minute closing session. Even sponsored learning carries a
-              registration fee — which keeps attendance committed.
+              registration fee, which keeps attendance committed.
             </p>
             <p className="mt-3 text-sm italic text-ink-muted">Illustrative model. Institution partnerships to be confirmed.</p>
           </div>

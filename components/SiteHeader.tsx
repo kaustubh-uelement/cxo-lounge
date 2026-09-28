@@ -30,10 +30,10 @@ export function SiteHeader() {
     <header
       className={clsx(
         "sticky top-0 z-50 border-b transition-colors duration-300",
-        scrolled || open ? "border-line bg-white/90 backdrop-blur-md" : "border-transparent bg-paper/60 backdrop-blur-sm",
+        scrolled || open ? "border-line bg-white/95 backdrop-blur-md" : "border-transparent bg-paper/80 backdrop-blur-sm",
       )}
     >
-      <div className="container flex h-[72px] items-center justify-between gap-6">
+      <div className="container flex h-[68px] sm:h-[72px] items-center justify-between gap-3 sm:gap-6">
         <Logo />
         <nav aria-label="Main" className="hidden items-center gap-1 lg:flex">
           {nav.map((item) => (
@@ -58,7 +58,7 @@ export function SiteHeader() {
           </Link>
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-line bg-white text-navy-900 lg:hidden"
+            className="inline-flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-full border border-line bg-white text-navy-900 transition hover:bg-brand-50 lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? "Close menu" : "Open menu"}
@@ -69,23 +69,28 @@ export function SiteHeader() {
         </div>
       </div>
       {open && (
-        <nav id="mobile-nav" aria-label="Mobile" className="h-[calc(100dvh-72px)] overflow-y-auto border-t border-line bg-white lg:hidden">
-          <div className="container flex flex-col gap-1 py-6">
+        <nav id="mobile-nav" aria-label="Mobile" className="h-[calc(100dvh-68px)] sm:h-[calc(100dvh-72px)] overflow-y-auto border-t border-line bg-white lg:hidden">
+          <div className="container flex flex-col gap-1.5 py-6 pb-12">
             {[...nav, { href: "/studio", label: "CIO Studio" }, { href: "/foundation", label: "CIO Foundation" }, { href: "/contact", label: "Contact" }].map(
               (item) => (
                 <Link
                   key={item.href}
                   href={item.href}
+                  onClick={() => setOpen(false)}
                   className={clsx(
-                    "rounded-xl px-4 py-3.5 text-lg",
-                    isActive(item.href) ? "bg-brand-50 font-medium text-brand-700" : "text-navy-900",
+                    "rounded-xl px-4 py-3 text-base sm:text-lg font-medium transition",
+                    isActive(item.href) ? "bg-brand-50 text-brand-700" : "text-navy-900 hover:bg-paper",
                   )}
                 >
                   {item.label}
                 </Link>
               ),
             )}
-            <Link href="/membership/apply" className="mt-4 rounded-full bg-navy-900 px-5 py-3.5 text-center font-medium text-white">
+            <Link
+              href="/membership/apply"
+              onClick={() => setOpen(false)}
+              className="mt-4 rounded-full bg-navy-900 px-5 py-3.5 text-center text-base font-medium text-white shadow-sm transition hover:bg-navy-800"
+            >
               Apply to join
             </Link>
           </div>

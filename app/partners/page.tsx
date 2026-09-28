@@ -23,7 +23,7 @@ export default function PartnersPage() {
       <PageHero
         eyebrow="Partner with us"
         title="Reach decision-makers. Not headcount."
-        lead="Sponsorship-led and commission-free. We never take a cut of the deals you close with our members — you're our customer, they're our peers."
+        lead="Sponsorship-led and commission-free. We never take a cut of the deals you close with our members: you're our customer, they're our peers."
       >
         <ButtonLink href="#enquire" variant="light" arrow>Enquire now</ButtonLink>
         <ButtonLink href="#tiers" variant="outline-light">Sponsorship tiers</ButtonLink>
@@ -45,7 +45,7 @@ export default function PartnersPage() {
         <SectionHeading
           eyebrow="Professional engagements"
           title="Curated roundtables that turn into proofs of concept"
-          lead="It stops being your product and becomes the CIOs' product. That sense of belonging is what converts — and one successful POC builds credibility across the whole community."
+          lead="It stops being your product and becomes the CIOs' product. That sense of belonging is what converts, and one successful POC builds credibility across the whole community."
         />
         <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {roundtableSteps.map((s, i) => (
@@ -73,8 +73,8 @@ export default function PartnersPage() {
           <div>
             <p className="eyebrow-light">Beyond the court</p>
             <h2 className="h2 mt-3 !text-white">Bespoke events at actual cost + 20%</h2>
-            <p className="mt-4 text-lg leading-relaxed text-brand-100">
-              Extend your roundtable into a breakfast, luncheon or cocktail dinner at ITC and Taj properties — priced transparently, with the
+            <p className="mt-4 text-base sm:text-lg leading-relaxed text-brand-100">
+              Extend your roundtable into a breakfast, luncheon or cocktail dinner at ITC and Taj properties, priced transparently, with the
               audience curated by CIO Lounge.
             </p>
           </div>

@@ -41,8 +41,8 @@ export function EventsExplorer({ events }: { events: CxoEvent[] }) {
   return (
     <div>
       <div className="card mb-8 p-4 sm:p-5">
-        <div className="grid gap-3 md:grid-cols-[1fr_220px_auto]">
-          <label className="relative">
+        <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-[1fr_200px_auto]">
+          <label className="relative sm:col-span-2 md:col-span-1">
             <span className="sr-only">Search events</span>
             <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-muted" aria-hidden />
             <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search events, cities, audiences" className="field pl-11" />
@@ -57,12 +57,12 @@ export function EventsExplorer({ events }: { events: CxoEvent[] }) {
             </select>
           </label>
           <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink-strong">
-            <input type="checkbox" checked={openOnly} onChange={(e) => setOpenOnly(e.target.checked)} className="h-4 w-4 accent-brand-600" />
+            <input type="checkbox" checked={openOnly} onChange={(e) => setOpenOnly(e.target.checked)} className="h-4 w-4 accent-brand-600 rounded" />
             Registration open
           </label>
         </div>
-        <div className="mt-4 flex flex-wrap items-center gap-2" role="group" aria-label="Event type">
-          <SlidersHorizontal className="mr-1 h-4 w-4 text-ink-muted" aria-hidden />
+        <div className="mt-4 flex flex-wrap items-center gap-1.5 sm:gap-2 pt-1 border-t border-line/60" role="group" aria-label="Event type">
+          <SlidersHorizontal className="mr-1 h-4 w-4 text-ink-muted shrink-0" aria-hidden />
           {(["all", ...typeOrder] as const).map((t) =>
             t !== "all" && !counts[t] ? null : (
               <button
@@ -71,7 +71,7 @@ export function EventsExplorer({ events }: { events: CxoEvent[] }) {
                 onClick={() => setType(t)}
                 aria-pressed={type === t}
                 className={clsx(
-                  "rounded-full border px-3.5 py-1.5 text-sm transition",
+                  "rounded-full border px-3 py-1 text-xs sm:px-3.5 sm:py-1.5 sm:text-sm transition",
                   type === t ? "border-navy-900 bg-navy-900 text-white" : "border-line bg-white text-ink hover:border-brand-300",
                 )}
               >

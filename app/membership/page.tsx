@@ -9,7 +9,7 @@ import { CtaBand } from "@/components/CtaBand";
 
 export const metadata: Metadata = {
   title: "Membership",
-  description: "CIO Lounge membership for CIOs, CTOs, CISOs and CDOs — plans, benefits, eligibility and how to apply.",
+  description: "CIO Lounge membership for CIOs, CTOs, CISOs and CDOs: plans, benefits, eligibility and how to apply.",
 };
 
 export default function MembershipPage() {
@@ -18,7 +18,7 @@ export default function MembershipPage() {
       <PageHero
         eyebrow="Membership"
         title="Nothing is free. Everything is worth it."
-        lead="Members invest in the platform — which keeps the room serious, the conversations real, and our members never the product."
+        lead="Members invest in the platform, which keeps the room serious, the conversations real, and our members never the product."
       >
         <ButtonLink href="/membership/apply" variant="light" arrow>Apply now</ButtonLink>
         <ButtonLink href="#plans" variant="outline-light">Compare plans</ButtonLink>
@@ -35,7 +35,7 @@ export default function MembershipPage() {
       </Section>
 
       <Section tone="white">
-        <SectionHeading eyebrow="Member benefits" title="Professional, personal and family" lead="Benefits roll out across the year — professional engagements, learning and sport come first." />
+        <SectionHeading eyebrow="Member benefits" title="Professional, personal and family" lead="Benefits roll out across the year: professional engagements, learning and sport come first." />
         <BenefitsGrid />
       </Section>
 
@@ -54,9 +54,9 @@ export default function MembershipPage() {
             <div className="mt-8 rounded-2xl bg-navy-900 p-6 text-brand-100">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-300">How it works</p>
               <ol className="mt-4 space-y-3 text-sm">
-                <li><span className="font-semibold text-white">1. Apply</span> — a short form, five minutes.</li>
-                <li><span className="font-semibold text-white">2. Conversation</span> — a call with the CIO Lounge team.</li>
-                <li><span className="font-semibold text-white">3. Welcome</span> — your kit, your first invitations, your directory profile.</li>
+                <li><span className="font-semibold text-white">1. Apply:</span> a short form, five minutes.</li>
+                <li><span className="font-semibold text-white">2. Conversation:</span> a call with the CIO Lounge team.</li>
+                <li><span className="font-semibold text-white">3. Welcome:</span> your kit, your first invitations, your directory profile.</li>
               </ol>
             </div>
           </div>

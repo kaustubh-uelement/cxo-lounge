@@ -1,5 +1,5 @@
 // Event catalogue. Every page, filter, calendar file and the /api/events feed read from this list.
-// `sample: true` marks format examples that are not yet scheduled — they show a "Sample listing" badge.
+// `sample: true` marks format examples that are not yet scheduled: they show a "Sample listing" badge.
 
 export type EventType = "league" | "roundtable" | "learning" | "networking" | "finale" | "training";
 export type EventStatus = "registration-open" | "upcoming" | "announced" | "tba";
@@ -46,7 +46,7 @@ export const statusLabels: Record<EventStatus, string> = {
 
 const leagueHighlights = [
   "8 teams · 8 players per team · 64 players",
-  "Group stage, Super Four and IPL-style playoffs — concluded in one day",
+  "Group stage, Super Four and IPL-style playoffs, concluded in one day",
   "Tournament director and referees appointed by the All India Pickleball Association",
   "Personalised player kit worth ₹25–30K for every player",
   "Wellness zone, food and beverage court, live entertainment and awards",
@@ -54,7 +54,7 @@ const leagueHighlights = [
 
 const leagueGameDay = [
   { time: "Morning", item: "Arrivals, wellness zone and opening ceremony" },
-  { time: "Late morning", item: "League stage — two groups of four" },
+  { time: "Late morning", item: "League stage: two groups of four" },
   { time: "Lunch", item: "Food and beverage court · networking lounge" },
   { time: "Afternoon", item: "Super Four round robin" },
   { time: "Late afternoon", item: "Qualifier, Eliminator and Final" },
@@ -64,7 +64,7 @@ const leagueGameDay = [
 function cityLeague(slug: string, city: string, note?: string): CxoEvent {
   return {
     slug,
-    title: `CIO Pickleball League — ${city}`,
+    title: `CIO Pickleball League: ${city}`,
     type: "league",
     city,
     venue: `${city} · venue to be announced`,
@@ -88,31 +88,31 @@ function cityLeague(slug: string, city: string, note?: string): CxoEvent {
 export const events: CxoEvent[] = [
   {
     slug: "cpl-mumbai-2026",
-    title: "CIO Pickleball League — Mumbai",
+    title: "CIO Pickleball League: Mumbai",
     type: "league",
     city: "Mumbai",
     venue: "Mumbai · venue to be announced",
     startDate: "2026-11-07",
     dateLabel: "First week of November 2026 · Saturday or Sunday",
     status: "registration-open",
-    audience: "CIOs, CTOs and CISOs — the top layer only",
+    audience: "CIOs, CTOs and CISOs: the top layer only",
     capacity: "64 players · 8 teams",
     fee: "₹5,000–7,000 player registration (to be confirmed)",
     summary:
       "The inaugural edition of India's premier pickleball league for IT leaders. One spectacular day of competition and celebration in India's financial capital.",
     description: [
-      "Mumbai hosts the inaugural edition of the CIO Lounge Pickleball League. As India's financial capital and home to hundreds of technology decision-makers, it is the perfect launchpad — and sets the benchmark for every city league that follows.",
+      "Mumbai hosts the inaugural edition of the CIO Lounge Pickleball League. As India's financial capital and home to hundreds of technology decision-makers, it is the perfect launchpad, setting the benchmark for every city league that follows.",
       "Players train from September with certified coaches at four venues across the city, play practice matches and are drafted into eight teams. Game day brings them together with their families, partners and the pickleball community.",
     ],
     highlights: leagueHighlights,
     agenda: leagueGameDay,
-    agendaNote: "Indicative run of show — final schedule shared with registered players.",
+    agendaNote: "Indicative run of show; final schedule shared with registered players.",
     partnerNote: "Title, Platinum, Team Partner and Associate sponsorships are open for Mumbai.",
     featured: true,
   },
   {
     slug: "cpl-mumbai-coaching",
-    title: "Pre-season coaching camps — Mumbai",
+    title: "Pre-season coaching camps: Mumbai",
     type: "training",
     city: "Mumbai",
     venue: "Navi Mumbai · Lower Parel · Malad · Thane",
@@ -123,7 +123,7 @@ export const events: CxoEvent[] = [
     audience: "Registered Mumbai League players",
     capacity: "Open to all 64 registered players",
     summary:
-      "Weekly professional coaching under certified pickleball coaches, practice matches and team selection — so every player arrives match-ready.",
+      "Weekly professional coaching under certified pickleball coaches, practice matches and team selection, so every player arrives match-ready.",
     description: [
       "Pickleball is easy to learn and low impact, but a league deserves preparation. Camps run every Friday to Sunday at four venues so players can train close to home or office.",
       "Camps end with practice matches and team selection ahead of the Mumbai League.",
@@ -137,7 +137,7 @@ export const events: CxoEvent[] = [
   },
   {
     slug: "cpl-media-launch",
-    title: "CIO Pickleball League — Media Launch",
+    title: "CIO Pickleball League: Media Launch",
     type: "networking",
     city: "Mumbai",
     venue: "Mumbai · venue to be announced",
@@ -163,13 +163,13 @@ export const events: CxoEvent[] = [
     title: "National Grand Finale",
     type: "finale",
     city: "Goa / Phuket / Sri Lanka",
-    venue: "Exotic domestic or international venue — to be announced",
+    venue: "Exotic domestic or international venue (to be announced)",
     startDate: null,
     dateLabel: "After the city leagues · dates to be announced",
     status: "tba",
     audience: "City champions, members, partners and families",
     summary:
-      "City champions meet for the national title at an exotic destination — subject to sponsorship and logistics.",
+      "City champions meet for the national title at an exotic destination, subject to sponsorship and logistics.",
     description: [
       "Every city league crowns a champion. The Grand Finale brings them together for the national title, with a destination weekend for players, partners and families.",
     ],
@@ -191,11 +191,11 @@ export const events: CxoEvent[] = [
       "A curated roundtable in the CIO Lounge format: pre-read, a short product capsule, then an open discussion moderated by a CIO.",
     description: [
       "The partner's product literature is shared with 15 targeted BFSI leaders in advance. They arrive prepared, with their pros and cons.",
-      "The partner's product head presents a 15–25 minute capsule. A CIO moderates the open discussion that follows — and leaders who share the pain point step forward for a proof of concept.",
+      "The partner's product head presents a 15–25 minute capsule. A CIO moderates the open discussion that follows, and leaders who share the pain point step forward for a proof of concept.",
     ],
     highlights: [
       "Pre-read shared with every participant",
-      "CIO-moderated — not vendor-led",
+      "CIO-moderated, not vendor-led",
       "15–25 minute product capsule, never longer",
       "Clear path to proof of concept",
     ],
@@ -220,7 +220,7 @@ export const events: CxoEvent[] = [
     audience: "20 CISOs and security leaders",
     capacity: "20 leaders",
     summary:
-      "An intimate breakfast conversation among security leaders — the format included with every city in the Title sponsorship.",
+      "An intimate breakfast conversation among security leaders: the format included with every city in the Title sponsorship.",
     description: [
       "Title sponsors host a 20-CXO breakfast roundtable in every tour city. The audience is curated by CIO Lounge and the conversation is led by members.",
     ],
@@ -229,7 +229,7 @@ export const events: CxoEvent[] = [
   },
   {
     slug: "ai-leaders-residential-programme",
-    title: "AI for Technology Leaders — Residential Programme",
+    title: "AI for Technology Leaders: Residential Programme",
     type: "learning",
     city: "Mumbai",
     venue: "IIT Bombay (proposed)",
